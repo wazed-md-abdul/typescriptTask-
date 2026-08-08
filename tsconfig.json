@@ -5,5 +5,6 @@
         "outDir": "./js",
         "rootDir": "./ts",
         "noEmitOnError": true,
+        "isolatedModules": true
     }
 }
