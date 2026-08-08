@@ -7,18 +7,18 @@ type User = {
     age: number,
 
 }
+type NewUser = Omit<User, "id">
 const users: User[] = []
 let lastId: number = 0
-function addUser(username: string, email: string, age: number) {
+function addUser(newUser: NewUser) {
     const user: User = {
         id: ++lastId,
-        username,
-        email,
-        age,
+        ...newUser
     }
     users.push(user)
 }
-addUser("sami", "[EMAIL_ADDRESS]", 20)
+addUser({ username: "saima", email: "[EMAIL_ADDRESS]", age: 20 })
+addUser({ username: "wazed", email: "[EMAIL_ADDRESS]", age: 30 })
 console.log(users)
 
 // function removeUser(id: number) {
