@@ -51,4 +51,8 @@ interface IFriends {
     [index: number]: string;
 }
 
+//  its called index signature 
+// interface IFriends {
+//     [index: number]: string;
+// }
 const freinds: IFriends = ["A", "B", "C"];
