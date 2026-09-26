@@ -9,9 +9,6 @@ const createArrayWithString: CreateArrayWithString = (param) => {
     return [param];
 };
 
-const resultString = createArrayWithString("Hello TypeScript");
-console.log(resultString); // Output: ["Hello TypeScript"]
-
 // --- Generic Version ---
 // 1. Declare a generic function type
 type CreateArrayWithGeneric = <T>(param: T) => T[];
@@ -22,7 +19,7 @@ const createArrayWithGeneric: CreateArrayWithGeneric = (param) => {
 };
 
 const result1 = createArrayWithGeneric<string>("Hello Generic");
-const result2 = createArrayWithGeneric<number>(100);
+const result2 = createArrayWithGeneric(100);
 console.log(result1, result2);
 const fun = <T, U>(param1: T, param2: U) => {
     return [param1, param2];
